@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"
+    />
+    <title>Mapping Asteroids Orbiting Earth</title>
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oxanium&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <h1>Visualizing Asteroids using NASA Data</h1>
+      </div>
+      <div id="asteroidTooltip"></div>
+      <div id="asteroid-count"></div>
+      <div id="about">It's never too late to be an astronaut. Select any date between 1900 and 2039 to traverse space and discover asteroids near Earth! Careful, some might be dangerous.</div>
+      <main class="user-form">
+        <form id="js-form" class="Search-Date">
+          <label id="search-label" for="user-date">Select Date:</label>
+          <input
+            type="date"
+            name="date"
+            id="user-date"
+            min="1900-01-01"
+            max="2039-12-31"
+            required
+          />
+          <button type="submit" id="find-btn" class="css-search">
+            Search
+          </button>
+        </form>
+      </main>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- polyfill for date picker -->
+    <script src="https://github.com/jonstipe/date-polyfill/blob/master/date-polyfill.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
